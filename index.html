@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KBCA Time Table</title>
+  <style>
+    :root{
+      --table-width: 60%;
+      --primary: #87CEEB; /* skyblue */
+      --accent: #800000;  /* maroon */
+      --border-color: #333;
+      --bg: ghostwhite;
+      --break-bg: #f44336; /* red-ish */
+    }
+
+    html,body{
+      margin:0;
+      padding:0;
+      background: var(--bg);
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+    }
+
+    .container{
+      max-width: 1000px;
+      margin: 24px auto;
+      padding: 0 12px;
+    }
+
+    h1 {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 18px;
+      font-size: 1.6rem;
+      margin: 0 0 16px 0;
+    }
+
+    table {
+      width: var(--table-width);
+      margin: 0 auto;
+      border-collapse: collapse;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    th, td {
+      border: 2px solid var(--border-color);
+      padding: 10px 12px;
+      text-align: center;
+    }
+
+    th {
+      background: var(--primary);
+      color: #000;
+      font-weight: 700;
+    }
+
+    tr.break-row td {
+      background: var(--break-bg);
+      color: #fff;
+      font-weight: 700;
+    }
+
+    tr:nth-child(even):not(.break-row) td {
+      background: #fafafa;
+    }
+
+    /* small-screen responsiveness */
+    @media (max-width:700px){
+      table { width: 100%; font-size: 0.92rem; }
+      h1 { font-size: 1.2rem; }
+      th, td { padding: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main" aria-labelledby="timetable-title">
+    <h1 id="timetable-title">KBCA TIME TABLE</h1>
+
+    <table aria-describedby="timetable-desc">
+      <caption id="timetable-desc" style="caption-side:bottom; padding-top:8px;">
+        Weekly schedule
+      </caption>
+
+      <thead>
+        <tr>
+          <th scope="col">Time</th>
+          <th scope="col">Monday</th>
+          <th scope="col">Tuesday</th>
+          <th scope="col">Wednesday</th>
+          <th scope="col">Thursday</th>
+          <th scope="col">Friday</th>
+          <th scope="col">Saturday</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>8:00 am - 9:00 am</td>
+          <td>Java lab</td>
+          <td>Java lab</td>
+          <td>Java lab</td>
+          <td>Kannada</td>
+          <td>Kannada</td>
+          <td>Kannada</td>
+        </tr>
+
+        <tr>
+          <td>9:00 am - 10:00 am</td>
+          <td>Kannada</td>
+          <td>Kannada</td>
+          <td>Kannada</td>
+          <td>Java lab</td>
+          <td>Java lab</td>
+          <td>Java lab</td>
+        </tr>
+
+        <tr>
+          <td>10:00 am - 11:00 am</td>
+          <td>Java</td>
+          <td>Java</td>
+          <td>Java</td>
+          <td>Web Technology</td>
+          <td>Web Technology</td>
+          <td>Web Technology</td>
+        </tr>
+
+        <tr class="break-row">
+          <td>11:00 am - 11:15 am</td>
+          <td colspan="6">BREAK</td>
+        </tr>
+
+        <tr>
+          <td>11:15 am - 12:15 pm</td>
+          <td>Java</td>
+          <td>Java</td>
+          <td>Java</td>
+          <td>Graphics Lab</td>
+          <td>Graphics Lab</td>
+          <td>Graphics Lab</td>
+        </tr>
+
+        <tr>
+          <td>12:15 pm - 1:15 pm</td>
+          <td>English</td>
+          <td>English</td>
+          <td>English</td>
+          <td>Web Technology</td>
+          <td>Web Technology</td>
+          <td>Web Technology</td>
+        </tr>
+
+        <tr>
+          <td>1:15 pm - 2:00 pm</td>
+          <td>Graphics Lab</td>
+          <td>Graphics Lab</td>
+          <td>Graphics Lab</td>
+          <td>Web Tech Lab</td>
+          <td>Web Tech Lab</td>
+          <td>Web Tech Lab</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
